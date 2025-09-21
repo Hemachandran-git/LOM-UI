@@ -1,4 +1,12 @@
-import { Link } from "react-router-dom";
+import { NavLink , Link } from "react-router-dom";
+
+ const navItems = [
+              { title: "Meetings", path: "/meetings" },
+              { title: "Attendance", path: "/attendance" },
+              { title: "Grade", path: "/grades" },
+              { title: "Events & Occasions", path: "/events" },
+              { title: "TimeTable", path: "/timetable" }
+            ];
 
 function Dashboard() {
   return (
@@ -139,7 +147,7 @@ function Dashboard() {
             <img src="/favicon.ico" alt="Logo" className="LOM" width='125'height='125' />
           </div>
           <nav id="dashboard-nav">
-             <Link to="/">Home</Link>
+             <Link to="/dashboard">Home</Link>
              <Link to="/Courses">Courses</Link>
              <Link to="/who-we-are">Who are we</Link>
              <Link to="/contact-us">Contact Us</Link>
@@ -155,13 +163,13 @@ function Dashboard() {
               Our mission is simple: to empower educators and students with tools that streamline workflows, encourage learning, and build a connected academic community.</p>
           </div>
         </section>
-
+       
         <div id="dashboard-grid">
-          <div className="dashboard-box">Meetings</div>
-          <div className="dashboard-box">Attendance</div>
-          <div className="dashboard-box">Grade</div>
-          <div className="dashboard-box">Events & Occasions</div>
-          <div className="dashboard-box">TimeTable</div>
+          {navItems.map((item) => (
+        <NavLink key={item.path} to={item.path} className="dashboard-box">
+          {item.title}
+        </NavLink>
+      ))}
         </div>
 
          <div id="dashboard-chatbot">
