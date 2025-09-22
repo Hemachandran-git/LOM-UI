@@ -12,9 +12,61 @@ function Timetable(): JSX.Element {
   ]);
 
   return (
-    <div className="page">
-      <h2>Class Timetable</h2>
-      <table className="data-table">
+    <>
+    <style>{`
+      .timetable-page {
+        padding: 2rem;
+        background: #f8fafc;
+        min-height: 100vh;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .timetable-title {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        color: #2563eb;
+      }
+
+      .timetable-table {
+        width: 80%;
+        margin: 0 auto;
+        border-collapse: collapse;
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+      }
+
+      .timetable-table th,
+      .timetable-table td {
+        border: 1px solid #e5e7eb;
+        padding: 1rem;
+        text-align: center;
+        font-size: 1rem;
+      }
+
+      .timetable-table th {
+        background: #2563eb;
+        color: #fff;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      .timetable-table tr:nth-child(even) {
+        background: #f9fafb;
+      }
+
+      .timetable-table tr:hover {
+        background: #e0f2fe;
+        transition: background 0.3s ease-in-out;
+      }
+
+    `}</style>
+        <div className="timetable-page">
+      <h2 className="timetable-title">Class Timetable</h2>
+      <table className="timetable-table">
         <thead>
           <tr>
             <th>Day</th>
@@ -33,6 +85,7 @@ function Timetable(): JSX.Element {
         </tbody>
       </table>
     </div>
+    </>
     );
 };
 export default Timetable;

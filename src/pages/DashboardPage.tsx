@@ -4,8 +4,8 @@ import { NavLink , Link } from "react-router-dom";
               { title: "Meetings", path: "/meetings" },
               { title: "Attendance", path: "/attendance" },
               { title: "Grade", path: "/grades" },
-              { title: "Events & Occasions", path: "/events" },
-              { title: "TimeTable", path: "/timetable" }
+              { title: "Events & Occasions", path: "/EventsPage" },
+              { title: "TimeTable", path: "/TimeTablePage" }
             ];
 
 function Dashboard() {

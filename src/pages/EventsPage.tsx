@@ -61,7 +61,7 @@ function EventsPage():JSX.Element {
       }
     `}</style>
     <div className="page">
-      <h2>📅 Exam Schedule</h2>
+      <h2>Exam Schedule</h2>
       <table className="data-table">
         <thead>
           <tr>

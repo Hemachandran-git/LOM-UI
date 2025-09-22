@@ -109,7 +109,7 @@ function AttendancePage():JSX.Element {
       }
       `}</style>
     <div className="page">
-      <h2>📊 Attendance Tracking</h2>
+      <h2>Attendance Tracking</h2>
       <table className="data-table">
         <thead>
           <tr>
